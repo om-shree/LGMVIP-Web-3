@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.App > * {
+  flex-basis: 30%; /* Sets the base size before distributing space */
+}
+
+.App > .vertical-line {
+  flex-basis: 1%;
+}
+
+.vertical-line {
+  flex-grow: 1; /* Takes the remaining space */
+  background-color: black;
+  height: auto;
+  min-height: 400px; /* Adjust based on your design needs */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container > * {
+    flex-basis: 100%;
+  }
+
+  .vertical-line {
+    height: 2px;
+    min-height: 2px;
+    width: 100%;
+  }
+}
